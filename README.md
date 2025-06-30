@@ -335,25 +335,246 @@ php spark cache:clear    # Clear cache
 
 ---
 
-## Checklist Praktikum
 
-- [ ] Konfigurasi PHP extensions
-- [ ] Install CodeIgniter 4
-- [ ] Setup CLI dan debugging mode
-- [ ] Buat route baru
-- [ ] Buat Controller Page
-- [ ] Test auto routing
-- [ ] Buat view dengan template
-- [ ] Implementasi layout CSS
-- [ ] Lengkapi semua menu navigasi
-- [ ] Dokumentasi dan screenshot
-- [ ] Upload ke repository
 
 ### Hasil:
 [Screenshot hasil ada disetiap latihan]
 
 ## Latihan 2: []
-[Akan diisi setelah mengerjakan latihan 2]
+[# Praktikum 2: Framework Lanjutan (CRUD) - CodeIgniter 4
+
+**Mata Kuliah:** Pemrograman Web 2  
+**Dosen:** Agung Nugroho (agung@pelitabangsa.ac.id)  
+**Universitas:** Pelita Bangsa, Bekasi
+
+## 📋 Tujuan Praktikum
+
+1. Memahami konsep dasar Model dalam CodeIgniter 4
+2. Memahami konsep dasar CRUD (Create, Read, Update, Delete)
+3. Membuat program sederhana menggunakan Framework CodeIgniter 4
+
+## 🛠️ Persiapan
+
+### Tools yang Dibutuhkan:
+- Text Editor (VSCode)
+- XAMPP (MySQL Server)
+- Web Browser
+- CodeIgniter 4
+
+### Struktur Folder:
+```
+lab7_php_ci/
+├── app/
+│   ├── Controllers/
+│   ├── Models/
+│   ├── Views/
+│   └── Config/
+├── public/
+└── .env
+```
+
+## 📊 Database Setup
+
+### 1. Membuat Database
+```sql
+CREATE DATABASE lab_ci4;
+```
+
+### 2. Membuat Tabel Artikel
+```sql
+CREATE TABLE artikel (
+    id INT(11) auto_increment,
+    judul VARCHAR(200) NOT NULL,
+    isi TEXT,
+    gambar VARCHAR(200),
+    status TINYINT(1) DEFAULT 0,
+    slug VARCHAR(200),
+    PRIMARY KEY(id)
+);
+```
+
+### 3. Sample Data
+```sql
+INSERT INTO artikel (judul, isi, slug) VALUES
+('Artikel pertama', 'Lorem Ipsum adalah contoh teks atau dummy dalam industri percetakan dan penataan huruf atau typesetting. Lorem Ipsum telah menjadi standar contoh teks sejak tahun 1500an, saat seorang tukang cetak yang tidak dikenal mengambil sebuah kumpulan teks dan mengacaknya untuk menjadi sebuah buku contoh huruf.', 'artikel-pertama'),
+('Artikel kedua', 'Tidak seperti anggapan banyak orang, Lorem Ipsum bukanlah teks-teks yang diacak. Ia berakar dari sebuah naskah sastra latin klasik dari era 45 sebelum masehi, hingga bisa dipastikan usianya telah mencapai lebih dari 2000 tahun.', 'artikel-kedua');
+```
+
+## ⚙️ Konfigurasi
+
+### Database Configuration (.env)
+```env
+database.default.hostname = localhost
+database.default.database = lab_ci4
+database.default.username = root
+database.default.password = 
+database.default.DBDriver = MySQLi
+```
+
+## 🏗️ Implementasi CRUD
+
+### 1. Model (ArtikelModel.php)
+```php
+<?php
+namespace App\Models;
+use CodeIgniter\Model;
+
+class ArtikelModel extends Model
+{
+    protected $table = 'artikel';
+    protected $primaryKey = 'id';
+    protected $useAutoIncrement = true;
+    protected $allowedFields = ['judul', 'isi', 'status', 'slug', 'gambar'];
+}
+```
+
+### 2. Controller (Artikel.php)
+Controller berisi method-method untuk:
+- `index()` - Menampilkan daftar artikel
+- `view($slug)` - Menampilkan detail artikel
+- `admin_index()` - Menampilkan halaman admin
+- `add()` - Menambah artikel baru
+- `edit($id)` - Mengubah artikel
+- `delete($id)` - Menghapus artikel
+
+### 3. Views
+- `artikel/index.php` - Tampilan daftar artikel untuk user
+- `artikel/detail.php` - Tampilan detail artikel
+- `artikel/admin_index.php` - Tampilan admin panel
+- `artikel/form_add.php` - Form tambah artikel
+- `artikel/form_edit.php` - Form edit artikel
+
+### 4. Routing (Routes.php)
+```php
+// Public routes
+$routes->get('/artikel', 'Artikel::index');
+$routes->get('/artikel/(:any)', 'Artikel::view/$1');
+
+// Admin routes
+$routes->group('admin', function($routes) {
+    $routes->get('artikel', 'Artikel::admin_index');
+    $routes->add('artikel/add', 'Artikel::add');
+    $routes->add('artikel/edit/(:any)', 'Artikel::edit/$1');
+    $routes->get('artikel/delete/(:any)', 'Artikel::delete/$1');
+});
+```
+
+## 📸 Screenshots
+
+### 1. Tampilan Awal (Belum Ada Data)
+![Tampilan Web Kosong](screenshot/tampilan-kosong.png)
+*Tampilan web ketika belum ada data artikel*
+
+### 2. Daftar Artikel
+![Daftar Artikel](screenshot/daftar-artikel.png)
+*Tampilan daftar artikel setelah data ditambahkan*
+
+### 3. Detail Artikel
+![Detail Artikel](screenshot/detail-artikel.png)
+*Tampilan detail artikel ketika judul diklik*
+
+### 4. Admin Panel
+![Admin Panel](screenshot/admin-panel.png)
+*Tampilan halaman admin untuk mengelola artikel*
+
+### 5. Form Tambah Artikel
+![Form Tambah](screenshot/form-tambah.png)
+*Form untuk menambah artikel baru*
+
+### 6. Form Edit Artikel
+![Form Edit](screenshot/form-edit.png)
+*Form untuk mengubah artikel yang sudah ada*
+
+## 🚀 Cara Menjalankan
+
+1. **Clone Repository**
+   ```bash
+   git clone [URL_REPOSITORY]
+   cd Lab7Web
+   ```
+
+2. **Setup Database**
+   - Jalankan XAMPP
+   - Buat database `lab_ci4`
+   - Import struktur tabel dan sample data
+
+3. **Konfigurasi Environment**
+   - Copy `.env.example` ke `.env`
+   - Sesuaikan konfigurasi database
+
+4. **Jalankan Aplikasi**
+   ```bash
+   php spark serve
+   ```
+
+5. **Akses Aplikasi**
+   - User: `http://localhost:8080/artikel`
+   - Admin: `http://localhost:8080/admin/artikel`
+
+## 🔧 Fitur CRUD
+
+### Create (Tambah)
+- Form tambah artikel dengan validasi
+- Auto-generate slug dari judul
+- Redirect ke halaman admin setelah berhasil
+
+### Read (Baca)
+- Tampilan daftar artikel dengan preview
+- Detail artikel dengan slug-based URL
+- Paginasi untuk data banyak
+
+### Update (Ubah)
+- Form edit dengan data yang sudah ada
+- Validasi input
+- Update data ke database
+
+### Delete (Hapus)
+- Konfirmasi sebelum menghapus
+- Soft delete atau hard delete
+- Redirect setelah berhasil hapus
+
+## 📝 Validasi
+
+- **Judul:** Required field
+- **Isi:** Opsional
+- **Slug:** Auto-generate dari judul
+- **Status:** Default 0
+
+## 🔍 Struktur MVC
+
+```
+Model (ArtikelModel)
+├── Database interaction
+├── Data validation rules
+└── Business logic
+
+View (Templates)
+├── artikel/index.php
+├── artikel/detail.php
+├── artikel/admin_index.php
+├── artikel/form_add.php
+└── artikel/form_edit.php
+
+Controller (Artikel)
+├── index() - List articles
+├── view() - Show detail
+├── admin_index() - Admin panel
+├── add() - Create article
+├── edit() - Update article
+└── delete() - Remove article
+```
+
+## 🎯 Hasil yang Dicapai
+
+✅ Berhasil membuat aplikasi CRUD sederhana  
+✅ Implementasi Model-View-Controller  
+✅ Database integration dengan MySQL  
+✅ Form validation  
+✅ Routing configuration  
+✅ User-friendly interface  
+✅ Admin panel untuk manajemen konten  
+
+
 
 ## Latihan 3: [Judul Latihan 3]
 [Akan diisi setelah mengerjakan latihan 3]
