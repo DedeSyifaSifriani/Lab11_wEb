@@ -443,30 +443,19 @@ $routes->group('admin', function($routes) {
 ```
 
 ## 📸 Hasil screenshot ada di latihan2
+# Praktikum 2 - CRUD Implementation
 
-### 1. Tampilan Awal (Belum Ada Data)
-![Tampilan Web Kosong](screenshot/tampilan-kosong.png)
-*Tampilan web ketika belum ada data artikel*
+1. [![Tampilan Awal](tampilan_kosong.png)](tampilan_kosong.png) Tampilan web ketika belum ada data
 
-### 2. Daftar Artikel
-![Daftar Artikel](screenshot/daftar-artikel.png)
-*Tampilan daftar artikel setelah data ditambahkan*
+2. [![Daftar Artikel](daftar_artikel.png)](daftar_artikel.png) Tampilan daftar artikel 
 
-### 3. Detail Artikel
-![Detail Artikel](screenshot/detail-artikel.png)
-*Tampilan detail artikel ketika judul diklik*
+3. [![Detail Artikel](detail_artikel.png)](detail_artikel.png) Tampilan detail artikel
 
-### 4. Admin Panel
-![Admin Panel](screenshot/admin-panel.png)
-*Tampilan halaman admin untuk mengelola artikel*
+4. [![Admin Panel](admin_panel.png)](admin_panel.png) Halaman admin
 
-### 5. Form Tambah Artikel
-![Form Tambah](screenshot/form-tambah.png)
-*Form untuk menambah artikel baru*
+5. [![Form Tambah](form_tambah.png)](form_tambah.png) Form tambah artikel
 
-### 6. Form Edit Artikel
-![Form Edit](screenshot/form-edit.png)
-*Form untuk mengubah artikel yang sudah ada*
+6. [![Form Edit](form_edit.png)](form_edit.png) Form edit artikel
 
 ## 🚀 Cara Menjalankan
 
