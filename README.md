@@ -6,6 +6,8 @@
 - **NIM**: [312310372]
 - **Kelas**: [TI.23.C2]
 
+## Informasi hasil Praktikum ditampilkan diakhir praktikum
+
 ## Latihan 1: HTML dan CSS Dasar
 
 ### Langkah 1: Membuat File HTML
@@ -325,7 +327,19 @@ php spark cache:clear    # Clear cache
 ```
 ---
 ### Hasil:
-[Screenshot hasil ada disetiap latihan]
+[# Praktikum 1 - PHP Framework (CodeIgniter)
+
+1. [![Hasil Latihan 1](latihan1/screenshot/hasil_latihan1.png)](latihan1/screenshot/hasil_latihan1.png) Hasil dari latihan 1
+
+2. [![Tampilan About](latihan1/screenshot/tampilan_about.png)](latihan1/screenshot/tampilan_about.png) Halaman About
+
+3. [![Tampilan Artikel Kosong](latihan1/screenshot/tampilan_artikelkosong.png)](latihan1/screenshot/tampilan_artikelkosong.png) Tampilan ketika belum ada artikel
+
+4. [![Tampilan Halaman About](latihan1/screenshot/tampilan_halamanAbout.png)](latihan1/screenshot/tampilan_halamanAbout.png) Layout halaman About lengkap
+
+5. [![Tampilan Not Found](latihan1/screenshot/tampilan_notpound.png)](latihan1/screenshot/tampilan_notpound.png) Halaman error 404
+
+6. [![Tampilan Terms of Service](latihan1/screenshot/tampilan_termofservies.png)](latihan1/screenshot/tampilan_termofservies.png) Halaman Terms of Service]
 
 ## Latihan 2: []
 [# Praktikum 2: Framework Lanjutan (CRUD) - CodeIgniter 4
@@ -444,15 +458,14 @@ $routes->group('admin', function($routes) {
 
 ## 📸 Hasil screenshot ada di latihan2
 # Praktikum 2 - CRUD Implementation
-# Praktikum 2 - CRUD Implementation
 
-1. [![Tampilan Awal](latihan2/ss/tampilan_kosong.png)](latihan1/ss/tampilan_kosong.png) Tampilan web ketika belum ada data
+1. [![Admin Panel](latihan2/ss/admin_panel.png)](latihan1/ss/admin_panel.png) Halaman admin
+   
+2. [![Tampilan Awal](latihan2/ss/tampilan_kosong.png)](latihan1/ss/tampilan_kosong.png) Tampilan web ketika belum ada data
 
-2. [![Daftar Artikel](latihan2/ss/daftar_artikel.png)](latihan1/ss/daftar_artikel.png) Tampilan daftar artikel
+3. [![Daftar Artikel](latihan2/ss/daftar_artikel.png)](latihan1/ss/daftar_artikel.png) Tampilan daftar artikel
 
-3. [![Detail Artikel](latihan2/ss/detail_artikel.png)](latihan1/ss/detail_artikel.png) Tampilan detail artikel
-
-4. [![Admin Panel](latihan2/ss/admin_panel.png)](latihan1/ss/admin_panel.png) Halaman admin
+4. [![Detail Artikel](latihan2/ss/detail_artikel.png)](latihan1/ss/detail_artikel.png) Tampilan detail artikel
 
 5. [![Form Tambah](latihan2/ss/form_tambah.png)](latihan1/ss/form_tambah.png) Form tambah artikel
 
@@ -750,52 +763,6 @@ class ArtikelTerkini extends Cell
 <?= $this->endSection() ?>
 ```
 
-## 📸 Screenshots
-
-### Praktikum 2 - CRUD Implementation
-
-#### 1. Tampilan Awal (Belum Ada Data)
-![Tampilan Web Kosong](latihan1/screenshot/hasil latihan1.png)
-*Tampilan web ketika belum ada data artikel*
-
-#### 2. Daftar Artikel
-![Daftar Artikel](screenshot/praktikum2/daftar-artikel.png)
-*Tampilan daftar artikel setelah data ditambahkan*
-
-#### 3. Detail Artikel
-![Detail Artikel](screenshot/praktikum2/detail-artikel.png)
-*Tampilan detail artikel ketika judul diklik*
-
-#### 4. Admin Panel
-![Admin Panel](screenshot/praktikum2/admin-panel.png)
-*Tampilan halaman admin untuk mengelola artikel*
-
-#### 5. Form Tambah Artikel
-![Form Tambah](screenshot/praktikum2/form-tambah.png)
-*Form untuk menambah artikel baru*
-
-#### 6. Form Edit Artikel
-![Form Edit](screenshot/praktikum2/form-edit.png)
-*Form untuk mengubah artikel yang sudah ada*
-
-### Praktikum 3 - View Layout & View Cell
-
-#### 1. Layout Utama
-![Layout Utama](screenshot/praktikum3/layout-utama.png)
-*Tampilan layout utama dengan sidebar dan navigation*
-
-#### 2. Home Page dengan Layout
-![Home Layout](screenshot/praktikum3/home-layout.png)
-*Halaman home menggunakan layout baru*
-
-#### 3. View Cell - Artikel Terkini
-![View Cell](screenshot/praktikum3/view-cell-artikel.png)
-*Sidebar menampilkan artikel terkini menggunakan View Cell*
-
-#### 4. Responsive Layout
-![Responsive Layout](screenshot/praktikum3/responsive-layout.png)
-*Layout responsif pada berbagai ukuran layar*
-
 ## 🚀 Cara Menjalankan
 
 1. **Clone Repository**
@@ -894,17 +861,6 @@ View Inheritance
 ├── $this->renderSection('content')
 └── view_cell() function
 ```
-
-## 🎯 Hasil yang Dicapai
-
-### Praktikum 2 - CRUD Operations
-✅ Berhasil membuat aplikasi CRUD sederhana  
-✅ Implementasi Model-View-Controller  
-✅ Database integration dengan MySQL  
-✅ Form validation  
-✅ Routing configuration  
-✅ User-friendly interface  
-✅ Admin panel untuk manajemen konten  
 
 ### Praktikum 3 - Advanced View Features
 ✅ Implementasi View Layout untuk template konsisten  
