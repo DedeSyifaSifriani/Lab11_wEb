@@ -765,7 +765,7 @@ class ArtikelTerkini extends Cell
 ### Praktikum 2 - CRUD Implementation
 
 #### 1. Tampilan Awal (Belum Ada Data)
-![Tampilan Web Kosong](screenshot/praktikum2/tampilan-kosong.png)
+![Tampilan Web Kosong](latihan1/screenshot/hasil latihan1.png)
 *Tampilan web ketika belum ada data artikel*
 
 #### 2. Daftar Artikel
