@@ -444,18 +444,19 @@ $routes->group('admin', function($routes) {
 
 ## 📸 Hasil screenshot ada di latihan2
 # Praktikum 2 - CRUD Implementation
+# Praktikum 2 - CRUD Implementation
 
-1. [![Tampilan Awal](tampilan_kosong.png)](tampilan_kosong.png) Tampilan web ketika belum ada data
+1. [![Tampilan Awal](latihan2/ss/tampilan_kosong.png)](latihan1/ss/tampilan_kosong.png) Tampilan web ketika belum ada data
 
-2. [![Daftar Artikel](daftar_artikel.png)](daftar_artikel.png) Tampilan daftar artikel 
+2. [![Daftar Artikel](latihan2/ss/daftar_artikel.png)](latihan1/ss/daftar_artikel.png) Tampilan daftar artikel
 
-3. [![Detail Artikel](detail_artikel.png)](detail_artikel.png) Tampilan detail artikel
+3. [![Detail Artikel](latihan2/ss/detail_artikel.png)](latihan1/ss/detail_artikel.png) Tampilan detail artikel
 
-4. [![Admin Panel](admin_panel.png)](admin_panel.png) Halaman admin
+4. [![Admin Panel](latihan2/ss/admin_panel.png)](latihan1/ss/admin_panel.png) Halaman admin
 
-5. [![Form Tambah](form_tambah.png)](form_tambah.png) Form tambah artikel
+5. [![Form Tambah](latihan2/ss/form_tambah.png)](latihan1/ss/form_tambah.png) Form tambah artikel
 
-6. [![Form Edit](form_edit.png)](form_edit.png) Form edit artikel
+6. [![Form Edit](latihan2/ss/form_edit.png)](latihan1/ss/form_edit.png) Form edit artikel
 
 ## 🚀 Cara Menjalankan
 
