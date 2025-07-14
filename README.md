@@ -456,8 +456,8 @@ $routes->group('admin', function($routes) {
 });
 ```
 
-## 📸 Hasil screenshot ada di latihan2
-# Praktikum 2 - CRUD Implementation
+## 📸 Hasil screenshot Praktikum 2
+
 
 1. [![Admin Panel](latihan2/ss/admin_panel.png)](latihan1/ss/admin_panel.png) Halaman admin
    
@@ -550,21 +550,10 @@ Controller (Artikel)
 └── delete() - Remove article
 ```
 ]
-# Lab7Web - Praktikum CodeIgniter 4
 
-**Mata Kuliah:** Pemrograman Web 2  
-**Dosen:** Agung Nugroho (agung@pelitabangsa.ac.id)  
-**Universitas:** Pelita Bangsa, Bekasi
+## Latihan 3: []
+[# Praktikum 3: View Layout dan View Cell
 
-## 📋 Daftar Praktikum
-
-### Praktikum 2: Framework Lanjutan (CRUD)
-**Tujuan:**
-1. Memahami konsep dasar Model dalam CodeIgniter 4
-2. Memahami konsep dasar CRUD (Create, Read, Update, Delete)
-3. Membuat program sederhana menggunakan Framework CodeIgniter 4
-
-### Praktikum 3: View Layout dan View Cell
 **Tujuan:**
 1. Memahami konsep View Layout di CodeIgniter 4
 2. Menggunakan View Layout untuk membuat template tampilan
@@ -637,21 +626,6 @@ database.default.username = root
 database.default.password = 
 database.default.DBDriver = MySQLi
 ```
-
-## 🏗️ Implementasi CRUD (Praktikum 2)
-
-### 1. Model (ArtikelModel.php)
-```php
-<?php
-namespace App\Models;
-use CodeIgniter\Model;
-
-class ArtikelModel extends Model
-{
-    protected $table = 'artikel';
-    protected $primaryKey = 'id';
-    protected $useAutoIncrement = true;
-    protected $allowedFields = ['judul', 'isi', 'status', 'slug', 'gambar'];
 }
 ```
 
@@ -761,86 +735,6 @@ class ArtikelTerkini extends Cell
 <hr>
 <p><?= $content; ?></p>
 <?= $this->endSection() ?>
-```
-
-## 🚀 Cara Menjalankan
-
-1. **Clone Repository**
-   ```bash
-   git clone [URL_REPOSITORY]
-   cd Lab7Web
-   ```
-
-2. **Setup Database**
-   - Jalankan XAMPP
-   - Buat database `lab_ci4`
-   - Import struktur tabel dan sample data
-
-3. **Konfigurasi Environment**
-   - Copy `.env.example` ke `.env`
-   - Sesuaikan konfigurasi database
-
-4. **Jalankan Aplikasi**
-   ```bash
-   php spark serve
-   ```
-
-5. **Akses Aplikasi**
-   - User: `http://localhost:8080/artikel`
-   - Admin: `http://localhost:8080/admin/artikel`
-
-## 🔧 Fitur CRUD
-
-### Create (Tambah)
-- Form tambah artikel dengan validasi
-- Auto-generate slug dari judul
-- Redirect ke halaman admin setelah berhasil
-
-### Read (Baca)
-- Tampilan daftar artikel dengan preview
-- Detail artikel dengan slug-based URL
-- Paginasi untuk data banyak
-
-### Update (Ubah)
-- Form edit dengan data yang sudah ada
-- Validasi input
-- Update data ke database
-
-### Delete (Hapus)
-- Konfirmasi sebelum menghapus
-- Soft delete atau hard delete
-- Redirect setelah berhasil hapus
-
-## 📝 Validasi
-
-- **Judul:** Required field
-- **Isi:** Opsional
-- **Slug:** Auto-generate dari judul
-- **Status:** Default 0
-
-## 🔍 Struktur MVC
-
-### Praktikum 2 - Basic MVC
-```
-Model (ArtikelModel)
-├── Database interaction
-├── Data validation rules
-└── Business logic
-
-View (Templates)
-├── artikel/index.php
-├── artikel/detail.php
-├── artikel/admin_index.php
-├── artikel/form_add.php
-└── artikel/form_edit.php
-
-Controller (Artikel)
-├── index() - List articles
-├── view() - Show detail
-├── admin_index() - Admin panel
-├── add() - Create article
-├── edit() - Update article
-└── delete() - Remove article
 ```
 
 ### Praktikum 3 - Advanced View Structure
