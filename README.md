@@ -584,81 +584,6 @@ lab7_php_ci/
 └── .env
 ```
 
-## 📊 Database Setup
-
-### 1. Membuat Database
-```sql
-CREATE DATABASE lab_ci4;
-```
-
-### 2. Membuat Tabel Artikel
-```sql
-CREATE TABLE artikel (
-    id INT(11) auto_increment,
-    judul VARCHAR(200) NOT NULL,
-    isi TEXT,
-    gambar VARCHAR(200),
-    status TINYINT(1) DEFAULT 0,
-    slug VARCHAR(200),
-    PRIMARY KEY(id)
-);
-```
-
-### 3. Sample Data
-```sql
-INSERT INTO artikel (judul, isi, slug, created_at) VALUES
-('Artikel pertama', 'Lorem Ipsum adalah contoh teks atau dummy dalam industri percetakan dan penataan huruf atau typesetting. Lorem Ipsum telah menjadi standar contoh teks sejak tahun 1500an, saat seorang tukang cetak yang tidak dikenal mengambil sebuah kumpulan teks dan mengacaknya untuk menjadi sebuah buku contoh huruf.', 'artikel-pertama', NOW()),
-('Artikel kedua', 'Tidak seperti anggapan banyak orang, Lorem Ipsum bukanlah teks-teks yang diacak. Ia berakar dari sebuah naskah sastra latin klasik dari era 45 sebelum masehi, hingga bisa dipastikan usianya telah mencapai lebih dari 2000 tahun.', 'artikel-kedua', NOW());
-```
-
-**Note:** Perlu menambahkan field `created_at` untuk praktikum View Cell:
-```sql
-ALTER TABLE artikel ADD COLUMN created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP;
-```
-
-## ⚙️ Konfigurasi
-
-### Database Configuration (.env)
-```env
-database.default.hostname = localhost
-database.default.database = lab_ci4
-database.default.username = root
-database.default.password = 
-database.default.DBDriver = MySQLi
-```
-}
-```
-
-### 2. Controller (Artikel.php)
-Controller berisi method-method untuk:
-- `index()` - Menampilkan daftar artikel
-- `view($slug)` - Menampilkan detail artikel
-- `admin_index()` - Menampilkan halaman admin
-- `add()` - Menambah artikel baru
-- `edit($id)` - Mengubah artikel
-- `delete($id)` - Menghapus artikel
-
-### 3. Views
-- `artikel/index.php` - Tampilan daftar artikel untuk user
-- `artikel/detail.php` - Tampilan detail artikel
-- `artikel/admin_index.php` - Tampilan admin panel
-- `artikel/form_add.php` - Form tambah artikel
-- `artikel/form_edit.php` - Form edit artikel
-
-### 4. Routing (Routes.php)
-```php
-// Public routes
-$routes->get('/artikel', 'Artikel::index');
-$routes->get('/artikel/(:any)', 'Artikel::view/$1');
-
-// Admin routes
-$routes->group('admin', function($routes) {
-    $routes->get('artikel', 'Artikel::admin_index');
-    $routes->add('artikel/add', 'Artikel::add');
-    $routes->add('artikel/edit/(:any)', 'Artikel::edit/$1');
-    $routes->get('artikel/delete/(:any)', 'Artikel::delete/$1');
-});
-```
 
 ## 🎨 View Layout dan View Cell (Praktikum 3)
 
@@ -737,7 +662,7 @@ class ArtikelTerkini extends Cell
 <?= $this->endSection() ?>
 ```
 
-### 📚Praktikum 3 - Advanced View Structure
+### Advanced View Structure
 ```
 Layout System
 ├── layout/main.php (Master template)
@@ -818,7 +743,7 @@ public function render($kategori = null)
 
 # Praktikum Pemrograman Web 2 – CodeIgniter 4
 
-Repository ini berisi hasil pengerjaan **Praktikum 4,FIVE,6** pada mata kuliah *Pemrograman Web 2* menggunakan framework **CodeIgniter 4**.
+Repository ini berisi Lanjutan hasil pengerjaan **Praktikum 4,FIVE,6** pada mata kuliah *Pemrograman Web 2* menggunakan framework **CodeIgniter 4**.
 
 ## Informasi Praktikum
 - **Nama**: [Dede Syifa Sifriani]
