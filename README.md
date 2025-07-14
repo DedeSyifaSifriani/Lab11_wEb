@@ -342,7 +342,7 @@ php spark cache:clear    # Clear cache
 6. [![Tampilan Terms of Service](latihan1/screenshot/tampilan_termofservies.png)](latihan1/screenshot/tampilan_termofservies.png) Halaman Terms of Service]
 
 ## Latihan 2: []
-[# Praktikum 2: Framework Lanjutan (CRUD) - CodeIgniter 4
+**[# Praktikum 2: Framework Lanjutan (CRUD) - CodeIgniter 4**
 
 ## 📋 Tujuan Praktikum
 
@@ -552,7 +552,7 @@ Controller (Artikel)
 ]
 
 ## Latihan 3: []
-[# Praktikum 3: View Layout dan View Cell
+**[# Praktikum 3: View Layout dan View Cell**
 
 **Tujuan:**
 1. Memahami konsep View Layout di CodeIgniter 4
@@ -765,15 +765,6 @@ View Inheritance
 ✅ Modular component system  
 
 ## 📚 Pembelajaran
-
-### Dari Praktikum 2, saya memahami:
-1. **Model**: Cara membuat dan menggunakan model untuk interaksi database
-2. **Controller**: Logika aplikasi dan penanganan request/response
-3. **View**: Tampilan yang dinamis dengan data dari database
-4. **CRUD Operations**: Implementasi Create, Read, Update, Delete
-5. **Routing**: Pengaturan URL dan parameter
-6. **Validation**: Validasi input form
-7. **MVC Pattern**: Pemisahan logika aplikasi
 
 ### Dari Praktikum 3, saya memahami:
 1. **View Layout**: Template system untuk konsistensi tampilan
